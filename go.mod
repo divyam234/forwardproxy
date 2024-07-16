@@ -1,4 +1,4 @@
-module github.com/caddyserver/forwardproxy
+module github.com/divyam234/forwardproxy
 
 go 1.21
 
