@@ -40,7 +40,7 @@ import (
 	caddy "github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
 	"github.com/caddyserver/caddy/v2/modules/caddyhttp"
-	"github.com/caddyserver/forwardproxy/httpclient"
+	"github.com/divyam234/forwardproxy/httpclient"
 	"go.uber.org/zap"
 	"golang.org/x/net/proxy"
 )
@@ -169,7 +169,7 @@ func (h *Handler) Provision(ctx caddy.Context) error {
 			return fmt.Errorf("bad upstream URL: %v", err)
 		}
 		h.upstream = upstreamURL
-		
+
 		registerHTTPDialer := func(u *url.URL, _ proxy.Dialer) (proxy.Dialer, error) {
 			// CONNECT request is proxied as-is, so we don't care about target url, but it could be
 			// useful in future to implement policies of choosing between multiple upstream servers.

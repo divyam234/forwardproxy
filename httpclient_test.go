@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/caddyserver/forwardproxy/httpclient"
+	"github.com/divyam234/forwardproxy/httpclient"
 )
 
 func TestHttpClient(t *testing.T) {
